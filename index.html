@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editor de Imágenes Simple</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header class="title"><h1>Simple Image Editor</h1></header>
+    <div>
+      <div>
+        <label>Carga Imagen</label>
+        <input accept="image/*" type="file" name="image" id="input" />
+      </div>
+      <div>
+        <label>Carga Elemento</label>
+        <input accept="image/*" type="file" name="image" id="input2" />
+        </div>
+    </div>
+    <div>
+    <button id="sButton">Seleccionar</button>
+    <button id="del">Eliminar</button>
+    <button id="bScroll">Scroll</button>
+    <button id="bDraw">Draw</button>
+    <button id="bShowDraw">↓</button>
+    <button id="addFig">Add Figure</button>
+    <button id="bShowSquare">↓</button>
+    <button id="cancelButton">X</button>
+    <button id="btn">Generar imagen</button>
+      <div id="settingsFigure">
+        <label>Tipo de figura: </label>
+        <select id="opFigure" autocomplete="off">
+          <option value="" selected>none</option>
+          <option value="1">Square</option>
+          <option value="2">Circle</option>
+        </select>
+        <label>Color: </label>
+        <select id="opColor" autocomplete="off">
+          <option value="" selected>none</option>
+          <option value="1">Red</option>
+          <option value="2">Purple</option>
+          <option value="3">Black</option>
+          <option value="4">Pink</option>
+          <option value="5">White</option>
+          <option value="6">Yellow</option>
+          <option value="7">Blue</option>
+          <option value="8">Green</option>
+        </select>
+    </div>
+    <label id="warning_1">No ha seleccionado una figura y un color validos</label>
+    <div id="settingsDraw">
+      <label>Tipo de trazo: </label>
+      <select id="opTrazo" name="tipo_trazo" autocomplete="off">
+        <option value="" selected>Pencil</option>
+        <option value="1">Circle</option>
+        <option value="2">Spray</option>
+      </select>
+      <label>Color: </label>
+      <select id="opColorDraw" autocomplete="off">
+        <option value="" selected>Black</option>
+        <option value="1">Red</option>
+        <option value="2">Purple</option>
+        <option value="3">Green</option>
+        <option value="4">Pink</option>
+        <option value="5">White</option>
+        <option value="6">Yellow</option>
+        <option value="7">Blue</option>
+      </select>
+    </div>
+  </div>
+    <canvas id="canvas"></canvas>
+
+  <script src="./lib/fabric.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
